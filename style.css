@@ -1,0 +1,65 @@
+body {
+    background-color: #131313;
+}
+
+html, body {
+    color: white;
+}
+
+h1 {
+    position: relative;
+    left: 40%;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+#img {
+    position: relative;     
+    left: 46%;
+}
+
+.container {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 35%;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputField {
+    width: 300px;
+    height: 40px;
+
+    font-size: 1rem;
+
+    border-width: 0;
+    border: solid 2px rgb(56, 56, 205);
+    border-radius: 10px;
+    outline: none;
+    
+    text-indent: 15px;
+}
+
+#inputField:focus {
+    border: solid 2px orangered;
+}
+
+.faccende {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.faccende:hover {
+    color: greenyellow;
+}
+
+.dafare {
+    margin-top: 25px;
+}
