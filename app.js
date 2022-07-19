@@ -2,6 +2,8 @@ let bottone = document.getElementById('aggiungi'); // Prendi il bottone
 let daFareContainer = document.getElementById('daFareContainer'); // Prendi il container dove andremo ad aggiungere le faccende
 let inputField = document.getElementById('inputField'); // Prendi l'input dal quale prenderai la faccenda che ha scritto l'utente
 
+let fatteContainer = document.getElementById('fatte-container2');
+
 // Quando l'utente sta scrivendo, puo' direttamente premere il tasto "Enter" per aggiungere una faccenda
 inputField.addEventListener('keypress', function (event) {
     if(event.key === 'Enter') {
@@ -26,7 +28,10 @@ bottone.addEventListener('click', function(){
     faccenda.addEventListener('click', function(){  // se cliccata una volta, viene una linea sopra 
         faccenda.style.textDecoration = "line-through";
     })
-    faccenda.addEventListener('dblclick', function(){ // se cliccata due volte, viene eliminata dalla lista
+    faccenda.addEventListener('dblclick', function(){ // se cliccata due volte, viene eliminata dalla lista e mandata nella lista delle faccende fatte
         daFareContainer.removeChild(faccenda);
+        faccenda.classList.remove('faccende');
+        faccenda.classList.add('fatte');
+        fatteContainer.appendChild(faccenda);
     })
 })
